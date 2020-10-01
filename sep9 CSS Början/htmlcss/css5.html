@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [data-vegetable] {
+            color: green;
+        }
+
+        [data-meat="replace-quorn"] {
+            color: peru;
+        }
+
+        [lang|=sv] {
+            color: aquamarine;
+        }
+
+        [data-quantity$="kg"] {
+            font-weight: bold;
+        }
+
+        [data-quantity*="gr"] {
+            text-decoration: underline;
+        }
+
+        [data-quantity^="optional"] {
+            opacity: 0.3;
+        }
+
+        a:hover {
+            color: purple;
+        }
+
+        [href^="http"]::after {
+           content: " efter";
+        }
+
+        h2, p, a {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Ingredienser för recept: <em lang="sv-se">Fransk kyckling</em></h2>
+    <p>Visa recep för <a href="https://otvet.mail.ru/question/81096322">Fransk kyckling</a></p>
+   <ul>
+       <li data-quantity="1kg" data-vegetable>Tomater</li>
+       <li data-quantity="3" data-vegetable>Lök</li>
+       <li data-quantity="3" data-vegetable>Vitlök</li>
+       <li data-quantity="100g" data-vegetable>Gräslök</li>
+       <li data-quantity="2kg" data-meat="replace-quorn">Kyckling</li>
+       <li data-quantity="optional 150gr" data-meat>Bacon</li>
+       <li data-quantity="2msk" data-vegetable>Olivplja</li>
+       <li data-quantity="optional 25cl" data-vegetable>Vitt vin</li>
+   </ul>
+</body>
+</html>

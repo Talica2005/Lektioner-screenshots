@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <style>
+        section p {
+            color: green;
+        }
+
+        section > p {
+            color: yellow;
+        }
+        h2 + p {
+            text-transform: uppercase;
+        }
+        h2 ~ p{
+            border: 1px dashed black;
+        }
+
+    </style>
+</head>
+<body>
+   <section>
+       <h1>Rubrik</h1>
+       <p>Mening1</p>
+       <p>Mening2</p>
+   <article>
+   <h2>Rubrik2</h2>
+   <p>Mening3</p>
+   <p>Mening4</p>
+    </article>
+</section>
+</body>
+</html>
