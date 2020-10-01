@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix</title>
+    <style>
+        article {
+            width: 200px;
+            float: left;
+            background-color:darkgray; 
+        }
+
+        main {
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        .clearfix::after {
+            content:"";
+            display: table;
+            clear: both;
+        }
+
+    </style>>
+</head>
+<body>
+    <section>
+        <h1>UUUUUUUU</h1>
+        <p>KUYGTDFGvjgytf ygjycfjygvkjh kuyguylgbl
+            kgiuygiluhnoiö liuhlihn.
+            lkhgliuhli
+        </p>
+    
+    <main class="clearfix">
+        <article>
+        <h2>Rubrik</h2>
+        <p>KYFYgjhbgkuyg uygbkuygu ukyvgfkuyg
+            khgfvkuyg uyglugy uyghl
+            luyglu
+        </p>
+        <p>KYFYgjhbgkuyg uygbkuygu ukyvgfkuyg
+            khgfvkuyg uyglugy uyghl
+            luyglu
+        </p>
+    </article>
+    
+    <article>
+        <h2>OOOOOOOO</h2>
+        <p>KYFYgjhbgkuyg uygbkuygu ukyvgfkuyg
+            khgfvkuyg uyglugy uyghl
+            luyglu
+        </p>
+    </article>
+    </main>
+    <footer>
+        <h3>Footerinfo</h3>
+        <p>&copy; 2020</p>
+    </footer>
+    </section>
+</body>
+</html>
