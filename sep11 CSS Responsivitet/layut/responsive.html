@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14pt;
+        }
+
+        main {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 0;
+            min-height: 100%;
+            margin-bottom: -120px;
+        }
+
+        main > #sidebar {
+            float: right;
+        }
+
+        main > section > article {
+            width: 33.3%;
+            float: left;
+        }
+
+        nav {
+            background-color: rgb(63, 24, 128);
+            color: white;
+        }
+
+        nav > ul {
+            padding: 14px 0;
+            text-align: center;
+        }
+
+        nav > ul > li {
+            display: inline-block;
+        }
+
+        footer {
+            color: white;
+            height: 100px;
+            background-color: rgb(106, 53, 190);
+        }
+
+        footer > section {
+            text-align: center;
+            padding: 39px 0;
+        }
+
+        @media only screen and (max-width: 400px) {
+            body {
+            background-color: red;
+            }
+        }
+        
+        @media only screen and (min-width: 401px) and (max-width: 900px) {
+            body {
+                background-color: rgb(143, 31, 143);
+            }
+            main > #sidebar {
+                float: none;
+            }
+
+            main > #sidebar a {
+                color: white;
+                font-size: 18pt;
+            }
+        }
+
+        @media only screen and (min-width: 961px) {
+           body {
+               background-color: azure;
+           } 
+        }
+       
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+            <li>Menu4</li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>Rubrik för artikel</h2>
+                </header>
+                <p>Lalallalallaaaaalalala</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Rubrik för artikel</h2>
+                </header>
+                <p>Lalallalallaaaaalalala</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Rubrik för artikel</h2>
+                </header>
+                <p>Lalallalallaaaaalalala</p>
+            </article>
+        </section>
+        <aside id="sidebar">
+            <ul>
+                <li>
+                    <a href="">Artikel 1</a>
+                </li>
+                <li>
+                    <a href="">Artikel 2</a>
+                </li>
+                <li>
+                    <a href="">Artikel 3</a>
+                </li>
+                
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <!--<section class="contact">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>-->
+        <section>
+            <span>2019 Company</span>
+        </section>
+    </footer>
+</body>
+</html>
