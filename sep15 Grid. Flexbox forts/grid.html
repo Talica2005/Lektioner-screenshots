@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+
+        body {
+            margin: 40px;
+        }
+
+        .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 150%;
+        }
+
+        .hedaer, .footer {
+            background-color: #999;
+        }
+
+        .sidebar2 {
+            background-color: #CCC;
+            color: #444;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .sidebar2 {
+            grid-area: sidebar2;
+        }
+        .content {
+            grid-area: content;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-gap: 1em;
+            grid-template-areas:
+            "header" 
+            "sidebar" 
+            "content" 
+            "sidebar2"
+            "footer";
+        }
+
+        @media only screen and (max-width: 500px) {
+            .wrappen {
+                grid-template-columns: 20% auto;
+                grid-template-areas: 
+                "header header"
+                "sidebar content"
+                "sidebar sidebar2"
+                "footer footer";
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .wrapper {
+                grid-gap: 20px;
+                grid-auto-columns: 120px auto 120px;
+                grid-template-areas:
+                "header header header"
+                "sidebar content sidebar2"
+                "footer footer footer";
+                max-width: 600px;
+            }
+        }
+            
+        
+    </style>
+
+</head>
+<body>
+    <section class="wrapper">
+        <header class="box header">Header</header>
+        <aside class="box sidebar">Sidebar</aside>
+        <aside class="box sidebar2">Sidebar2</aside>
+        <main class="box content">
+            KGUYkghbkjh ghkughuk hjbl,uh
+            ljbhjhb lhbljbhiuhlöjh liuhlihl luhl.
+        </main>
+        <footer class="box footer">Footer</footer>
+    </section>
+   
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+             box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+            margin: 0;
+        }
+        
+        #main {
+            display: flex;
+            flex: 1;
+        }
+
+        #main > article {
+            flex: 1;
+        }
+
+        #main > nav, 
+#main > aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+header, footer {
+  background: yellowgreen;
+  height: 20vh;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+@media screen and (max-width: 575px) {
+  #main {
+    display: block;
+  }
+}
+        .header {
+            background-color: #777777;
+            height: 150px;
+        }
+
+        .hedaer, .footer {
+            background-color: #999;
+            border: 2px solid red;
+        }
+
+       
+        nav {
+            height: auto;
+            background-color: rgb(225, 219, 235);
+            color: white;
+        }
+
+        nav > ul {
+            padding: 0;
+            text-align: center;
+        }
+
+        nav > ul > li {
+            display: inline-block;
+            padding: 0 60px;
+        } 
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: darkblue;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing:0.2ex;
+        }
+
+        .presentation {
+            height: 200px;
+            background-color: aquamarine;
+            
+        }
+
+        .row::before, .row::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            position: relative;
+            float: left;
+            border: 1px solid red;
+        }
+
+        .column + .column {
+            margin-left: 1.6%;
+        }
+
+        .column-1 { width: 6.86666666667%; }
+
+        .column-2 { width: 15.3333333333%; }
+
+        .column-3 { width: 23.8%; }
+
+        .column-4 { width: 32.2666666667%; }
+
+        .column-5 { width: 40.7333333333%; }
+
+        .column-6 { width: 49.2%; }
+
+        .column-7 { width: 57.6666666667%; }
+
+        .column-8 { width: 66.1333333333%; }
+
+        .column-9 { width: 74.6%; }
+
+        .column-10 { width: 83.0666666667%; }
+
+        .column-11 { width: 91.5333333333%; }
+
+        .column-12 { width: 100%; 
+        margin-left: 0;
+        }
+
+        .column {
+            border: 1px solid rgb(211, 16, 16);
+            color: #777777;
+            padding: 5px;
+            min-height: 35px;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+        .row:last-child {
+            margin-bottom: 0;
+        }
+
+        .column .column {
+            border: none;
+            background-color: gold;
+        }
+
+        .footer {
+            height: 150px;;
+        }
+
+        @media only screen and (max-width: 550px) {
+            .column-1,
+            .column-2,
+            .column-3,
+            .column-4,
+            .column-5,
+            .column-6,
+            .column-7,
+            .column-8,
+            .column-9,
+            .column-10,
+            .column-11,
+            .column-12 {
+                width: auto;
+                float: none;
+            }
+
+            .column + .column {
+                margin-left: 0px;
+                
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <section class="row">
+        <nav class="column column-12">
+            <ul>
+            <li><a href="#">VÅR BUTIK</a></li>
+            <li><a href="#">KUNDSERVICE</a></li>
+            <li><a href="#">NYHETER</a></li>
+            <li><a href="#">KONTAKTA OSS</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section class="presentation">
+            <article>
+                
+                
+            </article>
+            <article>
+                <header>
+                    <h2>Rubrik för artikel</h2>
+                </header>
+                <p>Lalallalallaaaaalalala</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Rubrik för artikel</h2>
+                </header>
+                <p>Lalallalallaaaaalalala</p>
+            </article>
+        </section>
+        <aside id="sidebar">
+            <ul>
+                <a href="#">
+                    <a href="">Artikel 1</a>
+                </a href="#">
+                <a href="#">
+                    <a href="">Artikel 2</a>
+                </a href="#">
+                <a href="#">
+                    <a href="">Artikel 3</a>
+                </a href="#">
+                
+            </ul>
+        </aside>
+    </main>
+    <footer class="footer">
+        <!--<section class="contact">
+            <ul>
+                <a href="#"></a href="#">
+                <a href="#"></a href="#">
+                <a href="#"></a href="#">
+            </ul>
+        </section>-->
+        <section>
+            <span>2019 Company</span>
+        </section>
+    </footer>
+</body>
+</body>
+</html>
