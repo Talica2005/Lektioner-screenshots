@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positionering</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+            body {
+                height: 1200px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .example {
+                display: flex;
+                justify-content: space-around;
+                background-color: rosybrown;
+                width: 800px;
+                margin: 50px 0;
+                background-color: lightcoral;
+            }
+
+            .item img {
+                display: block;
+            }
+
+            .item-relative {
+                position: relative;
+                top: 30px;
+                left: 30px;
+            }
+
+            .iteme-absolute {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                /*broke img*/
+                width: 250px;
+                background-color: gray;
+            }
+
+            item-fixed {
+                position: relative;
+            }
+
+            .absolute {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="conatainer">O</div>
+
+    <div class="conatainer">
+        <div class="example absolute">
+            <div class="item"><img src="images/static.svg" /></div>
+            <div class="item item-absolute"><img scr="./images/absolute.svg" /></div>
+            <div class="item"><img src="images/static.svg" /></div>
+        </div>
+    </div>
+
+    <div class="conatainer">
+        <div class="example fixed">
+            <div class="item"><img src="images/static.svg" /></div>
+            <div class="item item-fixed"><img scr="images/fixed.svg" /></div>
+            <div class="item"><img src="images/static.svg" /></div>
+        </div>
+    </div>
+
+    <div class="conatainer">
+        <div class="example relative">
+            <div class="item"><img src="images/static.svg" /></div>
+            <div class="item item-relative"><img scr="images/relative.svg" /></div>
+            <div class="item"><img src="images/static.svg" /></div>
+        </div>
+    </div>
+
+    <div class="conatainer">
+        <div class="example static">
+            <div class="item"><img src="images/static.svg" /></div>
+            <div class="item item-static"><img scr="images/static.svg" /></div>
+            <div class="item"><img src="images/static.svg" /></div>
+        </div>
+    </div>
+    
+</body>
+</html>
